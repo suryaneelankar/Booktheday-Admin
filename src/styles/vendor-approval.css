@@ -1,0 +1,42 @@
+.vendor-approval-toolbar,
+.vendor-approval-pagination,
+.vendor-decision-actions { display: flex; align-items: end; gap: 12px; }
+.vendor-approval-search { flex: 1; min-width: 260px; }
+.vendor-approval-count { color: #806d62; font-size: 13px; }
+.vendor-approval-table-wrap { overflow-x: auto; }
+.vendor-approval-table { width: 100%; border-collapse: collapse; }
+.vendor-approval-table th,
+.vendor-approval-table td { padding: 14px 12px; border-bottom: 1px solid #efe2d9; text-align: left; }
+.vendor-approval-table th { color: #78645a; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
+.vendor-approval-subtext { display: block; margin-top: 4px; color: #8a776d; font-size: 12px; }
+.vendor-status { display: inline-flex; padding: 5px 9px; border-radius: 999px; font-size: 11px; font-weight: 800; text-transform: capitalize; }
+.vendor-status.pending { color: #8a5b1c; background: #fff7df; border: 1px solid #ecdca9; }
+.vendor-status.approved { color: #2e6a49; background: #edf8f1; border: 1px solid #cbe7d5; }
+.vendor-status.rejected,
+.vendor-status.suspended { color: #91483f; background: #fff0ed; border: 1px solid #efd1cb; }
+.vendor-approval-state { padding: 40px 16px; text-align: center; color: #806d62; }
+.vendor-approval-pagination { justify-content: center; align-items: center; margin-top: 20px; }
+.vendor-identity { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 18px; }
+.vendor-identity div { display: grid; gap: 6px; }
+.vendor-identity span { color: #806d62; font-size: 12px; }
+.vendor-match-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+.vendor-match-card { display: grid; grid-template-columns: 105px 1fr; gap: 12px; padding: 10px; border: 1px solid #eadbd2; border-radius: 14px; color: inherit; text-decoration: none; background: #fffdfa; }
+.vendor-match-card img,
+.vendor-match-placeholder { width: 105px; height: 88px; border-radius: 10px; object-fit: cover; background: #f5ebe5; }
+.vendor-match-placeholder { display: grid; place-items: center; color: #8d786d; font-size: 12px; }
+.vendor-match-card strong,
+.vendor-match-card span { display: block; }
+.vendor-match-card span { margin-top: 4px; color: #806d62; font-size: 12px; }
+.vendor-decision-panel { margin-top: 18px; }
+.vendor-confirm-check { display: flex; align-items: flex-start; gap: 10px; margin: 16px 0; }
+.vendor-confirm-check input { margin-top: 3px; }
+.vendor-reject-box { display: grid; gap: 8px; margin-top: 18px; padding: 14px; border: 1px solid #efd4ce; border-radius: 12px; background: #fff8f6; }
+.danger-button { width: fit-content; padding: 9px 14px; border: 1px solid #b85b4f; border-radius: 10px; background: #a9493e; color: white; cursor: pointer; }
+
+@media (max-width: 760px) {
+  .vendor-approval-toolbar,
+  .vendor-decision-actions { align-items: stretch; flex-direction: column; }
+  .vendor-approval-search { min-width: 0; }
+  .vendor-identity,
+  .vendor-match-grid { grid-template-columns: 1fr; }
+}

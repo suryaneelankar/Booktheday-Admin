@@ -1,0 +1,408 @@
+.venue-editor {
+  --ve-brand: #a74416;
+  --ve-ink: #332a23;
+  --ve-muted: #776c62;
+  --ve-line: #e8dfd5;
+  color: var(--ve-ink);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.ve-heading {
+  margin-bottom: 28px;
+}
+.ve-heading > a {
+  color: var(--ve-brand);
+  text-decoration: none;
+  font-size: 13px;
+}
+.ve-eyebrow {
+  display: block;
+  margin: 26px 0 10px;
+  color: var(--ve-brand);
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.ve-heading h1 {
+  font-size: 34px;
+  letter-spacing: -1px;
+  margin: 0 0 10px;
+}
+.ve-heading p,
+.ve-section header p,
+.ve-location > p {
+  color: var(--ve-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.ve-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.ve-section {
+  background: #fff;
+  border: 1px solid var(--ve-line);
+  border-radius: 15px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.ve-section > header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  border-bottom: 1px solid var(--ve-line);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.ve-section > header > span {
+  border: 1px solid #edcbb7;
+  color: var(--ve-brand);
+  background: #fff8f2;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+}
+.ve-section h2 {
+  font-size: 20px;
+  margin: 0 0 7px;
+}
+.ve-section h3 {
+  font-size: 15px;
+  margin: 22px 0 14px;
+}
+.ve-section header p {
+  margin: 0;
+}
+.ve-grid,
+.ve-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.ve-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+.ve-field input,
+.ve-field select,
+.ve-field textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  border: 1px solid #dcd3c9;
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--ve-ink);
+  background: #fff;
+  font: inherit;
+  font-weight: 400;
+}
+.ve-field textarea {
+  resize: vertical;
+}
+.venue-editor input:focus-visible,
+.venue-editor select:focus-visible,
+.venue-editor textarea:focus-visible,
+.venue-editor button:focus-visible,
+.venue-editor a:focus-visible {
+  outline: 2px solid var(--ve-brand);
+  outline-offset: 3px;
+}
+.ve-hint {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ve-muted);
+}
+.ve-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.ve-amenities label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--ve-line);
+  border-radius: 8px;
+  padding: 11px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.ve-amenities label.selected {
+  border-color: #d7a283;
+  background: #fff7ef;
+}
+.ve-amenities input,
+.ve-mode input {
+  accent-color: var(--ve-brand);
+}
+.ve-mode {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px;
+  background: #fbf5ee;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.ve-mode input {
+  width: 18px;
+  height: 18px;
+}
+.ve-menu {
+  border: 1px solid var(--ve-line);
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.ve-menu h3 {
+  margin: 0 0 20px;
+}
+.ve-price-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  padding: 20px;
+  background: #f5f8f2;
+  border-radius: 10px;
+}
+.ve-price-summary dt {
+  font-size: 12px;
+  color: var(--ve-muted);
+}
+.ve-price-summary dd {
+  margin: 8px 0 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+.ve-map {
+  height: 380px;
+  width: 100%;
+  border-radius: 10px;
+  background: #f3f0eb;
+}
+.ve-map-search {
+  margin-bottom: 16px;
+}
+.ve-map-search gmp-place-autocomplete {
+  width: 100%;
+  color-scheme: light;
+}
+.ve-location-details {
+  background: #faf8f5;
+  border: 1px solid var(--ve-line);
+  border-radius: 10px;
+  padding: 18px;
+}
+.ve-location-details > div {
+  margin-bottom: 12px;
+}
+.ve-location-details dt {
+  font-size: 11px;
+  color: var(--ve-muted);
+  margin-bottom: 5px;
+}
+.ve-location-details dd {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.ve-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.ve-media-picker {
+  margin: 0 0 26px;
+}
+.ve-existing-section {
+  margin: 0 0 26px;
+  padding: 16px;
+  border: 1px solid #ead9cc;
+  border-radius: 12px;
+  background: #fffaf6;
+}
+.ve-existing-section > h3 {
+  margin: 0 0 14px;
+}
+.ve-existing-media {
+  border-color: #ddc6b5;
+  background: #fff;
+}
+.ve-existing-media small {
+  color: #8a674f;
+  font-weight: 600;
+}
+.ve-loading {
+  min-height: 240px;
+  display: grid;
+  place-items: center;
+  color: var(--ve-muted);
+}
+.ve-media-picker > label {
+  display: block;
+  font-size: 13px;
+}
+.ve-media-picker input[type="file"] {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  font: inherit;
+  color: var(--ve-muted);
+}
+.ve-media-picker input::file-selector-button {
+  border: 1px solid var(--ve-line);
+  padding: 10px 15px;
+  background: #faf7f2;
+  color: var(--ve-brand);
+  border-radius: 8px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.ve-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+.ve-media-card {
+  min-width: 0;
+  border: 1px solid var(--ve-line);
+  border-radius: 10px;
+  padding: 8px;
+  background: #fff;
+}
+.ve-preview-button {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: #f5f1eb;
+  border-radius: 7px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.ve-preview-button img,
+.ve-preview-button video {
+  width: 100%;
+  height: 135px;
+  object-fit: cover;
+  display: block;
+}
+.ve-preview-button > span {
+  display: block;
+  background: #4c2721;
+  color: #fff;
+  padding: 7px;
+  font-size: 11px;
+}
+.ve-file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  margin: 9px 0 6px;
+}
+.ve-media-card small {
+  font-size: 10px;
+  color: var(--ve-muted);
+}
+.ve-remove {
+  display: block;
+  border: 0;
+  background: none;
+  color: #9a392c;
+  padding: 8px 0 0;
+  cursor: pointer;
+  font-size: 11px;
+}
+.ve-preview-dialog {
+  max-width: min(1000px, 94vw);
+  max-height: 94dvh;
+  padding: 18px;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+}
+.ve-preview-dialog::backdrop {
+  background: #1c1714cf;
+}
+.ve-preview-dialog > button {
+  display: block;
+  margin: 0 0 12px auto;
+}
+.ve-preview-dialog > img,
+.ve-preview-dialog > video {
+  display: block;
+  max-width: 100%;
+  max-height: 75dvh;
+  object-fit: contain;
+  margin: auto;
+}
+.ve-preview-dialog p {
+  font-size: 12px;
+}
+.ve-error {
+  border: 1px solid #edc1b5;
+  background: #fff1ec;
+  color: #923b27;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.ve-save {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid var(--ve-line);
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+.ve-save strong {
+  font-size: 14px;
+}
+.ve-save p {
+  font-size: 12px;
+  color: var(--ve-muted);
+  margin: 6px 0 0;
+}
+.venue-editor button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+@media (max-width: 700px) {
+  .ve-grid,
+  .ve-menu-grid,
+  .ve-price-summary {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .ve-section {
+    padding: 18px;
+  }
+  .ve-save {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ve-map {
+    height: 320px;
+  }
+  .ve-heading h1 {
+    font-size: 28px;
+  }
+}
