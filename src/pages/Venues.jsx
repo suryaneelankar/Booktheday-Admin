@@ -69,9 +69,23 @@ export default function Venues() {
 
                 if (controller.signal.aborted) return;
 
-                setVenues(response.data.data);
-                setTotalItems(response.data.totalItems);
-                setTotalPages(response.data.totalPages);
+                const responseData = response?.data ?? {};
+                console.log('Venues API response:', response.data);
+
+                const venueList = Array.isArray(responseData.data)
+                    ? responseData.data
+                    : Array.isArray(responseData.venues)
+                        ? responseData.venues
+                        : [];
+
+                setVenues(venueList);
+                setTotalItems(
+                    Number(responseData.totalItems) || venueList.length,
+                );
+                setTotalPages(
+                    Number(responseData.totalPages) ||
+                    Math.ceil(venueList.length / PAGE_SIZE),
+                );
             } catch (requestError) {
                 if (controller.signal.aborted) return;
 
@@ -104,6 +118,8 @@ export default function Venues() {
             page: 1,
         }));
     }
+
+    const safeVenues = Array.isArray(venues) ? venues : [];
 
     return (
         <>
@@ -196,7 +212,7 @@ export default function Venues() {
                             {totalItems} matching {totalItems === 1 ? 'venue' : 'venues'}
                         </p>
 
-                        {venues.length === 0 ? (
+                        {safeVenues?.length === 0 ? (
                             <div className="venue-state">
                                 <h2>No venues found</h2>
                                 <p className="muted">
@@ -226,7 +242,7 @@ export default function Venues() {
                                     </thead>
 
                                     <tbody>
-                                        {venues.map(venue => (
+                                        {safeVenues?.map(venue => (
                                             <tr key={venue._id}>
                                                 <td>
                                                     <Link to={`/venues/${venue._id}`} aria-label={`Review ${venue.functionHallName}`}>

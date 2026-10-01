@@ -1,21 +1,23 @@
 import axios from 'axios';
 
 const adminApi = axios.create({
-  baseURL: '/api/admin',
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   withCredentials: true,
-  timeout: 15000,
+  timeout: 30000,
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
-export function getApiError(error, fallback) {
-  if (!error.response) {
-    return 'Unable to reach the server. Check your connection and try again.';
-  }
-
-  const message = error.response.data?.message;
-
-  return typeof message === 'string'
-    ? message
-    : fallback;
+export function getApiError(
+  error,
+  fallbackMessage = 'Something went wrong.',
+) {
+  return (
+    error?.response?.data?.message ||
+    error?.message ||
+    fallbackMessage
+  );
 }
 
 export default adminApi;

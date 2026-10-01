@@ -25,17 +25,52 @@ const capacities = [
 const amenities = [
   "Tables with basic covers",
   "Chairs",
+
   "Restrooms/Toilets",
+  "Restrooms / Toilets",
+
   "Parking",
+
   "Wheelchair access",
+  "Wheelchair Access",
+
   "Coolers / Fans",
   "Air Conditioners (AC)",
   "Bedrooms",
+
   "Sound/music license",
+  "Sound System / Music Setup",
+
   "Lighting",
   "Power Backup",
   "Bridal Room",
   "Kitchen Space",
+
+  "Projector / Screen",
+  "Stage",
+  "Dining Area",
+  "Wi-Fi",
+  "Drinking Water",
+  "Attached Bathrooms",
+  "Hot Water / Geyser",
+  "Television",
+  "Refrigerator",
+  "Swimming Pool",
+  "Kids Swimming Pool",
+  "Private Lawn / Open Area",
+  "Rain Dance",
+  "Indoor Games",
+  "Outdoor Games",
+  "Kids Play Area",
+  "Barbecue Setup",
+  "Bonfire Area",
+  "Pet Friendly",
+  "Valet Parking",
+  "Lift",
+  "CCTV / Security",
+  "Fire Safety Equipment",
+  "Housekeeping",
+  "Caretaker Available",
 ];
 const menuDefinitions = [
   ["basic-veg", "Basic Veg"],
