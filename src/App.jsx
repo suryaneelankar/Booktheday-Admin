@@ -36,6 +36,8 @@ import VendorApplications from
 
 import VendorApplicationDetails from
   './pages/VendorApplicationDetails';
+import BulkVenueImport from
+  './pages/BulkVenueImport';
 
 function AppRoutes() {
   const {
@@ -123,6 +125,11 @@ function AppRoutes() {
           <Route
             path="/venues/new"
             element={<AddVenue />}
+          />
+
+          <Route
+            path="/venues/import"
+            element={<BulkVenueImport />}
           />
 
           <Route

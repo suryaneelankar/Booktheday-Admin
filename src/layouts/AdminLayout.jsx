@@ -101,6 +101,15 @@ export default function AdminLayout() {
                     </NavLink>
 
                     <NavLink
+                        to="/venues/import"
+                        end
+                        className={navigationClass}
+                    >
+                        <span aria-hidden="true">⇧</span>
+                        Bulk import
+                    </NavLink>
+
+                    <NavLink
                         to="/vendor-applications"
                         className={navigationClass}
                     >
